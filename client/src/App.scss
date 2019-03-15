@@ -1,0 +1,7 @@
+.article {
+  @include margin_center;
+  width: $w1000;
+  @media (max-width: 1000px){
+    width: 100%;
+  }
+}

@@ -1,0 +1,9 @@
+.footer{
+  padding: 20px 0;
+
+  & p {
+    text-align: center;
+    font-size: $contentFont;
+    color: #ccc;
+  }
+}

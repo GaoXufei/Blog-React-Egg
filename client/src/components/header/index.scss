@@ -1,0 +1,9 @@
+.header {
+  width: 100%;
+
+  & .nav_wrap{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+  }
+}

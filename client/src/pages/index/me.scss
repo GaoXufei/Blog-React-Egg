@@ -1,0 +1,23 @@
+.me{
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+
+  .me_avatar{
+    width: 100px;
+    height: 100px;
+    background: darkgrey;
+    @include margin_center;
+  }
+
+  .me_info{
+    text-align: center;
+    margin-top: 10px;
+
+    & > p{
+      line-height: 32px;
+      font-size: $contentFont;
+      color: darkcyan;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.posts{
+  margin-top: 20px;
+
+  & ul{
+    // margin-top: -20px;
+
+    & :global{
+      & li{
+        &.list_show{
+          opacity: 1;
+        }
+      }
+    }
+
+    & li{
+      background: #fff;
+      padding: 50px 20px;
+      box-sizing: border-box;
+      margin-top: 20px;
+      transition: all 1s;
+
+      &  > a{
+        display: block;
+        color: #666;
+        transition: all 1s;
+
+        &:hover{
+          color: darkcyan;
+          text-decoration: underline;
+        }
+      }
+
+      & .bar{
+        &::after{
+          @include clearfix;
+        }
+        width: 100%;
+        padding: 20px 0;
+
+
+        & dl{
+          float: left;
+          display: table;
+          vertical-align: top;
+          margin-right: 15px;
+
+          & dt, dd{
+            display: table-cell;
+            font-size: $contentFont;
+            vertical-align: middle;
+          }
+
+          & dt{
+            padding-right: 10px;
+
+            & i {
+              font-size: 24px;
+
+              &:global {
+                &.date{
+                  color: red;
+                }
+  
+                &.tags{
+                  color: darkseagreen;
+                }
+              }
+            }
+          }
+
+          & dd{
+            &::after{
+              @include clearfix;
+            }
+
+            & a{
+              background: #fff;
+              border-radius: 3px;
+              border: 1px solid darkcyan;
+              color: darkcyan;
+              display: block;
+              float: left;
+              font-size: 12px;
+              padding: 2px 4px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+      & .synopsis{
+        
+        & p {
+          color: #ccc;
+          font-size: $contentFont;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          max-height: 26px
+        }
+      }
+    }
+  }
+
+  & ol{
+    &::after{
+      @include clearfix;
+    }
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & :global{
+      & li{
+        float: left;
+        cursor: pointer;
+        transition: all 1s;
+
+        &.page_btn_default{
+          font-size: 24px;
+
+          &:nth-of-type(1){
+            margin-right: 20px;
+          }
+          &:nth-last-of-type(1){
+            margin-left: 20px;
+          }
+        }
+
+        &.circle{
+          border-radius: 50%;
+          background: #666;
+          width: 4px;
+          height: 4px;
+          & + .circle{
+            margin-left: 8px;
+          }
+        }
+
+        &.active{
+          background: darkcyan;
+          width: 6px;
+          height: 6px;
+        }
+        
+        &.limit{
+          color: #ccc;
+        }
+
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,44 @@
+.tags {
+
+  & .tagName{
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    align-items: center;
+
+
+    & span{
+      color: darkcyan;
+    }
+
+    & i {
+      font-size: 12px;
+      border-radius: 50%;
+      background: darkcyan;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+
+  & .postsList{
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,.6);
+
+    & li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+
+    }
+  }
+}

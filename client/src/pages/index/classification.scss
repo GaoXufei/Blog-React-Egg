@@ -1,0 +1,36 @@
+.classification{
+  margin-top: 20px;
+  background: #f5f5f5;
+  width: 100%;
+
+  & > h2{
+    background: #fff;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    font-size: $h2Font;
+  }
+
+  & > ul{
+    padding: 21.5px 10px;
+    box-sizing: border-box;
+    margin-top: -10px;
+
+    &::after{
+      @include clearfix;
+    }
+
+    & li{
+      float: left;
+      margin-right: 5px;
+      margin-top: 10px;
+
+      & a{
+        color: #fff;
+        font-size: $contentFont;
+        display: block;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

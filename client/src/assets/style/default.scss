@@ -1,0 +1,18 @@
+$color: blue;
+$w900: 900px;
+$w1000: 1000px;
+$contentFont: 13px;
+$h2Font: 14px;
+
+@mixin margin_center {
+  margin: 0 auto;
+}
+
+@mixin clearfix {
+  content: '';
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}

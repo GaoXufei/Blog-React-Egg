@@ -1,0 +1,42 @@
+.CircleToRhombusesSpinner {
+  height: 15px;
+  width: calc( (6px + 6px * 1.125) * 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  & :global {
+    .circle {
+      height: 6px;
+      width: 6px;
+      margin-left: calc(6px * 1.125);
+      transform: rotate(45deg);
+      border-radius: 10%;
+      border: 1px solid darkcyan;
+      overflow: hidden;
+      background: transparent;
+      animation: circlesToRhombusesAnimation 1200ms linear infinite;
+
+      &:nth-of-type(1){
+        animation-delay: calc(150ms * 1);
+        margin-left: 0;
+      }
+      &:nth-of-type(2){
+        animation-delay: calc(150ms * 2);
+      }
+      &:nth-of-type(3){
+        animation-delay: calc(150ms * 3);
+      }
+    }
+  
+
+  }
+  
+}
+
+
+

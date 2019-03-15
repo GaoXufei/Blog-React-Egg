@@ -1,0 +1,142 @@
+:global{
+  // 默认情况
+  .nav{
+    position: relative;
+    padding: 20px;
+
+    & .nav_switch{
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+
+      // 线条
+      & span{
+        height: 2px;
+        background: #333;
+        display: block;
+        width: 30px;
+        clear: both;
+        transition: all .5s;
+        margin-bottom: 8px;
+  
+        &:nth-of-type(1){
+          width: 14px;
+        }
+        &:nth-of-type(3){
+          width: 14px;
+          float: right;
+        }
+      }  
+      &:hover{
+        & span{
+          width: 30px;
+        }
+      }
+    }
+    // 导航列表
+    & .nav_list_wrap{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      min-height: 0;
+      padding: 60px 0 40px 0;
+      visibility: hidden;
+      background: rgb(255,255,255) url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg') center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      transition: all .5s;
+
+
+      & li{
+        visibility: hidden;
+        opacity: 0;
+        width: 200px;
+        transform: translateX(10px);
+        transition: transform .7s, opacity .9s, visibility 1s;
+
+        @for $index from 0 through 20 {
+          &:nth-of-type( #{$index} ){
+            transition-delay: calc(#{$index}/10s);
+          }
+        }
+
+        & a{
+          padding: 10px 20px;
+          width: 100%;
+          display: block;
+          box-sizing: border-box;
+          position: relative;
+
+          &::before{
+            content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              width: 3px;
+              height: 0;
+              background-color: #08AEEA;
+              // background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+              z-index: 2;
+              transition: height .2s;
+          }
+
+          &:hover{
+            &::before{
+              height: 100%;
+            }
+          }
+
+          &.active{
+            color: #08AEEA;
+
+            &::before{
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // 激活状态
+  .nav_active{
+    & .nav_switch{
+      & > span{
+        
+
+        &:nth-of-type(1){
+          width: 15px;
+          transform:translate(2px,5px) rotateZ(45deg) ;
+        }
+        &:nth-of-type(2){
+          transform: rotateZ(-45deg) ;
+        }
+        &:nth-of-type(3){
+          width: 15px;
+          transform:translate(-2px, -4px) rotateZ(45deg), ;
+        }
+      }
+    }
+
+     // 导航列表
+     & .nav_list_wrap{
+      width: 200px;
+      min-height: 400px;
+      visibility: visible;
+
+
+      & li{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+

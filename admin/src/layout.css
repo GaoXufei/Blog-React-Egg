@@ -1,0 +1,8 @@
+
+.container .ant-layout-sider-children ul li span a{
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+.container .ant-layout-sider-children ul li.ant-menu-item-selected a{
+  color: #fff;
+}
