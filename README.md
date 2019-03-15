@@ -28,3 +28,6 @@
 > - 仍然是React, 使用了阿里的开源UI组件库Ant Design
 > - 既然使用了Ant，那么按需加载就是必不可少的，这里使用了官方推荐的react-app-rewired对create-react-app默认配置进行了自定义，babel-plugin-import按需加载组件和样式 - [传送门](https://ant.design/docs/react/use-in-typescript-cn)
 > - 接口请求方面仍然是fetch
+
+## 运行环境(Environment)
+> 系统：Centos7
